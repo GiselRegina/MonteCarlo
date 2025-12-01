@@ -1,5 +1,0 @@
-streamlit
-pandas
-math
-random
-numpy
