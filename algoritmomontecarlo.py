@@ -39,11 +39,16 @@ st.sidebar.header("Parámetros")
 # Función a integrar
 opcion = st.sidebar.selectbox(
     "Seleccione la función a integrar",
-    (
-            "1) $f(x)= \\dfrac{1}{e^{x} + e^{-x}}$",
-            "2) $f(x)= \\dfrac{2}{e^{x} + e^{-x}}$"
-    )
+    ("Opción 1", "Opción 2")
 )
+
+# Mostrar función elegida en formato matemático real
+if opcion == "Opción 1":
+    st.latex(r"f(x)=\frac{1}{e^{x}+e^{-x}}")
+    funcion = f_opcion_a
+else:
+    st.latex(r"f(x)=\frac{2}{e^{x}+e^{-x}}")
+    funcion = f_opcion_b
 
 funcion = f_opcion_a if opcion.startswith("1") else f_opcion_b
 
